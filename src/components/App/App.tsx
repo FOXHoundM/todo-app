@@ -27,8 +27,12 @@ const App: React.FC = () => {
   return <div className='App'>
     <Header/>
 
-    <input className='App__input' value={value} onChange={e => setValue(e.target.value)}/>
-    <button className='' onClick={addTodo}>Add</button>
+    <div className="App__container">
+      <input placeholder='Add Todo here' className='App__input' value={value} onChange={e => setValue(e.target.value)}/>
+      <button className='App__button' onClick={addTodo}>Add</button>
+
+    </div>
+
 
     <TodoList items={todos}/>
   </div>;

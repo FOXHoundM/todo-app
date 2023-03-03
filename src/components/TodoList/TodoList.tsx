@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from "../TodoItem/TodoItem";
+import '../../css/TodoList.css';
 
 import {ITodo} from "../../types/data";
 
@@ -9,7 +10,7 @@ interface ITodoListProps {
 
 const TodoList: React.FC<ITodoListProps> = (props) => {
   return (
-    <div>
+    <div className='TodoList'>
       {
         props.items.map(todo => <TodoItem key={todo.id} {...todo} />)
       }

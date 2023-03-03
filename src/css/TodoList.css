@@ -1,0 +1,10 @@
+.TodoList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 736px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=TodoList.css.map */

@@ -1,15 +1,17 @@
 .App {
-  background: #454545;
+  background: #1A1A1A;
   margin: 0 auto;
   height: 100vh;
 }
 
 .App__container {
+  width: 736px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-top: -30px;
+  margin: -30px auto 64px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .App__input {

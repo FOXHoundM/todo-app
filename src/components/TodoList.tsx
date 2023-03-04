@@ -1,8 +1,8 @@
 import React from 'react';
-import TodoItem from "../TodoItem/TodoItem";
-import '../../css/TodoList.css';
+import TodoItem from "./TodoItem";
+import '../css/TodoList.css';
 
-import {ITodo} from "../../types/data";
+import {ITodo} from "../types/data";
 
 interface ITodoListProps {
   items: ITodo[]

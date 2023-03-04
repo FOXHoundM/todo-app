@@ -1,8 +1,8 @@
-import '../../css/App.css'
+import '../css/App.css'
 import React, {useState, useEffect, useRef} from 'react';
-import {ITodo} from '../../types/data'
-import Header from "../Header/Header";
-import TodoList from "../TodoList/TodoList";
+import {ITodo} from '../types/data'
+import Header from "./Header";
+import TodoList from "./TodoList";
 
 const App: React.FC = () => {
   //value из input в useState сохраняем

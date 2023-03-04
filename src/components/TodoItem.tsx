@@ -1,6 +1,6 @@
 import React from 'react';
-import {ITodo} from "../../types/data";
-import '../../css/TodoItem.css';
+import {ITodo} from "../types/data";
+import '../css/TodoItem.css';
 
 interface ITodoItem extends ITodo {
   removeTodo: (id: number) => void

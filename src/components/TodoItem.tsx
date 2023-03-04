@@ -15,8 +15,6 @@ const TodoItem: React.FC<ITodoItem> = ({id, title, complete, toggleTodo, removeT
         <input className='TodoItem__checkbox' type='checkbox' checked={complete} onChange={() => toggleTodo(id)}/>
         <h1 className="TodoItem__title">{title}</h1>
         <button onClick={() => removeTodo(id)} className="TodoItem__button"/>
-
-
       </label>
 
 

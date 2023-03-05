@@ -6,7 +6,6 @@
   border-radius: 8px;
   background: #262626;
   min-height: 72px;
-  padding: 0 16px;
 }
 
 .TodoItem__label {
@@ -21,10 +20,63 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  color: #F2F2F2;
-  margin: 0 12px;
+  color: #f2f2f2;
+  margin: auto 12px;
+  padding: 5px 0;
   overflow: hidden;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+.TodoItem__title::before {
+  content: "";
   display: inline-block;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 1em;
+  margin-left: 0.2em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.TodoItem__checkbox:not(:disabled):not(:checked) + .TodoItem__title:hover::before {
+  border-color: #b3d7ff;
+}
+
+.TodoItem__checkbox:not(:disabled):active + .TodoItem__title::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+.TodoItem__checkbox:focus + .TodoItem__title::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.TodoItem__checkbox:focus:not(:checked) + .TodoItem__title::before {
+  border-color: #80bdff;
+}
+
+.TodoItem__checkbox:checked + .TodoItem__title::before {
+  border-color: dodgerblue;
+  background: url("../images/checked.svg") no-repeat center center;
+  width: 15px;
+  height: 15px;
+}
+
+.TodoItem__checkbox:disabled + .TodoItem__title::before {
+  background-color: #f2f2f2;
+}
+
+.TodoItem__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 25px;
 }
 
 .TodoItem__button {
@@ -33,6 +85,7 @@
   height: 24px;
   border-radius: 4px;
   border: none;
+  margin-right: 20px;
 }
 .TodoItem__button:hover {
   opacity: 0.8;

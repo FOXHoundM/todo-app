@@ -1,0 +1,43 @@
+.App {
+  background: #1A1A1A;
+  margin: 0 auto;
+  height: 100vh;
+  font-family: Inter Arial sans-serif;
+}
+
+.App__container {
+  width: 736px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: -30px auto 64px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.App__input {
+  width: 638px;
+  height: 54px;
+  background: #262626;
+  border: 1px solid #0D0D0D;
+  border-radius: 8px;
+  color: #808080;
+}
+.App__input:focus {
+  outline: 1px solid #808080;
+}
+
+.App__button {
+  width: 90px;
+  height: 52px;
+  background: #1E6F9F url("../images/add-button.svg") no-repeat center right 16px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  padding-right: 30px;
+}
+.App__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.5s ease-in-out;
+}

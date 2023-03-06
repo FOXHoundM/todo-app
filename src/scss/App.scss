@@ -12,7 +12,6 @@
   align-items: center;
   gap: 8px;
   margin: -30px auto 64px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .App__input {
@@ -23,6 +22,8 @@
   border-radius: 8px;
   color: #808080;
   padding: 0 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
 
   &:focus {
     outline: 1px solid #808080;
@@ -38,6 +39,8 @@
   border: none;
   color: #fff;
   padding-right: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
 
   &:hover {
     cursor: pointer;
@@ -45,6 +48,33 @@
     transition: opacity .5s ease-in-out;
   }
 
+}
+
+@media screen and (max-width: 850px) {
+  .App__container {
+    width: 600px;
+
+  }
+
+}
+
+@media screen and (max-width: 630px) {
+  .App__container {
+    width: 450px;
+
+  }
+
+  .App__button {
+    background: #1E6F9F url("../images/add-button.svg") no-repeat center right 5px;
+  }
+
+}
+
+@media screen and (max-width: 470px){
+  .App__container {
+    width: 280px;
+
+  }
 }
 
 

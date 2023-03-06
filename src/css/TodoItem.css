@@ -18,7 +18,7 @@
   width: 100%;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 140%;
   color: #f2f2f2;
   margin: auto 12px;
@@ -27,15 +27,16 @@
   min-height: 24px;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 }
 .TodoItem__title::before {
   content: "";
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid #adb5bd;
+  border: 1px solid dodgerblue;
   border-radius: 50%;
   margin-right: 1em;
   margin-left: 0.2em;
@@ -64,12 +65,17 @@
 .TodoItem__checkbox:checked + .TodoItem__title::before {
   border-color: dodgerblue;
   background: url("../images/checked.svg") no-repeat center center;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
 }
 
 .TodoItem__checkbox:disabled + .TodoItem__title::before {
   background-color: #f2f2f2;
+}
+
+.TodoItem__checkbox:checked + .TodoItem__title {
+  text-decoration: line-through;
+  color: lightslategray;
 }
 
 .TodoItem__checkbox {
@@ -81,8 +87,9 @@
 
 .TodoItem__button {
   background: url("../images/trash.svg ") no-repeat center center;
-  width: 24px;
-  height: 24px;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
   border: none;
   margin-right: 20px;
@@ -91,6 +98,25 @@
   opacity: 0.8;
   transition: 0.7s ease-in-out;
   cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  .TodoItem {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .TodoItem {
+    width: 450px;
+  }
+  .TodoItem__title {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .TodoItem {
+    width: 280px;
+  }
 }
 
 /*# sourceMappingURL=TodoItem.css.map */
